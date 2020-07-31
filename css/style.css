@@ -20,12 +20,13 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  border-style: none;
+  
 }
 
 ul,
 li {
   list-style: none;
+  padding: 0;
 }
 
 .pc-only {
@@ -170,6 +171,7 @@ li {
  Works
 ---------------------------------*/
 .works-list {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -40px;
