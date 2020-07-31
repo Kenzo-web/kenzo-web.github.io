@@ -44,6 +44,7 @@ li {
 /*--------------------------------
  レイアウト
 ---------------------------------*/
+
 .wrapper {
   background-color: #fff;
 }
@@ -268,8 +269,16 @@ li {
   color: #00f;
 }
 
+.rate0:after {
+  width: 8px;
+}
+
 .rate1:after {
   width: 20px;
+}
+
+.rate6:after {
+  width: 30px;
 }
 
 .rate2:after {
@@ -280,6 +289,10 @@ li {
   width: 60px;
 }
 
+.rate7:after {
+  width: 70px;
+}
+
 .rate4:after {
   width: 80px;
 }
@@ -287,6 +300,7 @@ li {
 .rate5:after {
   width: 100px;
 }
+
 
 /*--------------------------------
  Contact
@@ -418,6 +432,7 @@ li {
   .works-body {
     text-align: left;
   }
+
 
   .works-title {
     font-size: 100px;

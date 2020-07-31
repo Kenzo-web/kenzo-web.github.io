@@ -2,10 +2,7 @@
 * {
     margin: 0;
 }
-*::after,
-*::before {
-    box-sizing: inherit;
-}
+
 :root {
     --primary-050: #3700ff; /* サンプル */
     --secondary-050: #ffe604; /* サンプル */
@@ -31,8 +28,6 @@
     margin-left: 1rem;
     color: var(--primary-050);
 }
-
-
 
 /* 以降追記 */
 .global-nav {
@@ -81,72 +76,4 @@
     background-color: var(--primary-050);
     color: var(--secondary-050);
     border-bottom: 4px solid var(--secondary-050);
-}
-
-
-
-body {
-    line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-S
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
 }
