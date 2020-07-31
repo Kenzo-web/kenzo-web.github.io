@@ -1,4 +1,89 @@
 
+* {
+    margin: 0;
+}
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+:root {
+    --primary-050: #3700ff; /* サンプル */
+    --secondary-050: #ffe604; /* サンプル */
+    --dark-087: rgba(0,0,0,0.87);
+    --dark-054: rgba(0,0,0,0.54);
+    --dark-026: rgba(0,0,0,0.26);
+    --dark-012: rgba(0,0,0,0.12);
+    --light-100: rgba(255,255,255,1.00);
+    --light-070: rgba(255,255,255,0.70);
+    --light-030: rgba(255,255,255,0.30);
+    --light-012: rgba(255,255,255,0.12);
+    --gray-010: #f1f1f1;
+    --gray-020: #e4e4e4;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-feature-settings: "palt";
+    font-size: 16pt;
+}
+
+.global-nav h1 {
+    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+    margin-left: 1rem;
+    color: var(--primary-050);
+}
+
+
+
+/* 以降追記 */
+.global-nav {
+    position: fixed; /* 固定 */
+    top: 0;
+    left: 0;
+    width: 100%;   /* 幅調整 */
+
+    display: flex;
+    align-items: center;
+    /* 子要素の間を開けて端っこピッタリ */
+    justify-content: space-between;
+
+    /* 背景設定しないとナビゲーションの背景が透明のまま */
+    background-color: #fff;
+
+    box-shadow: 0 2px 1rem var(--dark-026);
+}
+
+
+.global-nav .menu ul {
+    list-style: none;  /* 点を消す */
+    display: flex;
+    align-items: center;
+}
+
+.global-nav .menu ul a {
+    color: var(--primary-050);
+    text-decoration: none;  /* 文字下線消す */
+
+    display: inline-block;   /* 画像と同じ扱いにする */
+    line-height: 1;  /* 文字高さを1としておくことで無駄な余白がない */
+    font-size: 1.125rem;
+    padding: calc(1.25rem - 4px) 2rem;
+    transition: color,background-color 0.3s;
+    border-right: 1px solid var(--dark-012);
+    border-top: 4px solid transparent; 
+    border-bottom: 4px solid transparent; 
+}
+.global-nav .menu ul li:last-child a {
+    border-right: none;
+}
+
+/* マウスカーソルが乗っかった時 */
+.global-nav .menu ul a:hover {
+    background-color: var(--primary-050);
+    color: var(--secondary-050);
+    border-bottom: 4px solid var(--secondary-050);
+}
+
+
 
 body {
     line-height:1;
