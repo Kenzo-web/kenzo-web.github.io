@@ -10,25 +10,17 @@ li {
   padding: 0;
 }
 
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
-
 /*--------------------------------
  文字
 ---------------------------------*/
 .heading-primary {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Pacifico', cursive;
+  font-weight: 900;
   font-size: 36px;
   line-height: 1;
   display: inline-block;
   letter-spacing: .2em;
-  text-transform: lowercase;
-  color: #00f;
+  color:rgb(33,210,244);
 }
 
 .section-heading {
@@ -39,6 +31,7 @@ li {
 .section-lead {
   margin-bottom: 40px;
   text-align: center;
+  color:rgb(33,210,244);
 }
 
 /*--------------------------------
@@ -47,6 +40,7 @@ li {
 
 .wrapper {
   background-color: #fff;
+  color:rgb(33,210,244);
 }
 
 .section {
@@ -90,7 +84,7 @@ li {
   line-height: 1;
   display: block;
   letter-spacing: .1em;
-  color: #00f;
+  color: rgb(33,210,244);
 }
 
 .logo-text {
@@ -130,7 +124,10 @@ li {
   color: #333;
   
 }
-
+#about-section{
+  background-color: rgb(31,28,47);
+  border-top:1px solid rgb(33,210,244);
+}
 
 /*--------------------------------
  Works
@@ -161,6 +158,11 @@ li {
   font-size: 12px;
   font-weight: bold;
   margin-top: 8px;
+}
+
+#works-section {
+  background-color: rgb(31,28,47);
+  border-top:1px solid rgb(33,210,244);
 }
 
 
@@ -301,7 +303,10 @@ li {
 .rate5:after {
   width: 100px;
 }
-
+#skill-section{
+  background-color: rgb(31,28,47);
+  border-top:1px solid rgb(33,210,244);
+}
 
 /*--------------------------------
  Contact
@@ -324,12 +329,15 @@ li {
   font-size: 16px;
   display: block;
   margin-top: 5px;
-  color: #333;
+  color:rgb(33,210,244);
 }
 
 .contact-image {
-  width: 87px;
+  width:  100px;       /* ※縦横を同値に */
+  height: 100px;       /* ※縦横を同値に */
+  border-radius: 50%; /* 角丸を50%で指定することで正方形の画像は円にくり抜かれる */
 }
+
 
 .contact-text {
   font-size: 16px;
@@ -337,6 +345,10 @@ li {
   text-align: center;
 }
 
+#contact-section{
+  background-color: rgb(31,28,47);
+  border-top:1px solid rgb(33,210,244);
+}
 
 /*--------------------------------
  Footer
