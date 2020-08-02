@@ -19,8 +19,9 @@ li {
   font-size: 36px;
   line-height: 1;
   display: inline-block;
-  letter-spacing: .2em;
-  color:rgb(33,210,244);
+  letter-spacing: .1em;
+  color:rgb(255, 255, 255);
+  margin-bottom: 30px;
 }
 
 .section-heading {
@@ -28,11 +29,7 @@ li {
   text-align: center;
 }
 
-.section-lead {
-  margin-bottom: 40px;
-  text-align: center;
-  color:rgb(33,210,244);
-}
+
 
 /*--------------------------------
  レイアウト
@@ -60,39 +57,87 @@ li {
 /*--------------------------------
 ヘッダー
 ---------------------------------*/
-.header {
-  display: 1;
+* {
+  margin: 0;
+}
+
+:root {
+  --primary-050: #FF6D00; /* サンプル */
+  --secondary-050: #ffe604; /* サンプル */
+  --dark-087: rgba(0,0,0,0.87);
+  --dark-054: rgba(0,0,0,0.54);
+  --dark-026: rgba(255, 255, 255, 0.26);
+  --dark-012: rgba(255, 255, 255, 0.12);
+  --light-100: rgba(255,255,255,1.00);
+  --light-070: rgba(255,255,255,0.70);
+  --light-030: rgba(255,255,255,0.30);
+  --light-012: rgba(255,255,255,0.12);
+  --gray-010: #f1f1f1;
+  --gray-020: #e4e4e4;
+
+  font-family: 'Pacifico', cursive;
+  font-feature-settings: "palt";
+  font-size: 16pt;
+}
+/*portforio*/
+.global-nav h1 {
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  margin-left: 1rem;
+  color: rgb(110, 110, 110);
+}
+
+
+/* 以降追記 */
+.global-nav {
+  position: fixed; /* 固定 */
+  top: 0;
+  left: 0;
+  width: 100%;   /* 幅調整 */
+
+  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 540px;
+  /* 子要素の間を開けて端っこピッタリ */
+  justify-content: space-between;
+
+  /* 背景設定しないとナビゲーションの背景が透明のまま */
+  background-color: #1C0A00;
+
+  box-shadow: 0 7px 2rem var(--dark-026);
 }
 
-.logo-name {
-  font-family: "Amatic SC", cursive;
-  font-size: 32px;
-  line-height: 1;
-  display: block;
-  margin-bottom: 5px;
-  text-align: center;
-  color: #757575;
+
+.global-nav .menu ul {
+  list-style: none;  /* 点を消す */
+  display: flex;
+  align-items: center;
 }
 
-.logo-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 88px;
-  font-weight: normal;
-  line-height: 1;
-  display: block;
-  letter-spacing: .1em;
-  color: rgb(33,210,244);
+.global-nav .menu ul a {
+  color: var(--primary-050);
+  text-decoration: none;  /* 文字下線消す */
+
+  display: inline-block;   /* 画像と同じ扱いにする */
+  line-height: 1;  /* 文字高さを1としておくことで無駄な余白がない */
+  font-size: 1.125rem;
+  padding: calc(1.25rem - 4px) 2rem;
+  transition: color,background-color 0.3s;
+  border-right: 5px solid var(--dark-012);
+  border-top: 4px solid transparent; 
+  border-bottom: 4px solid transparent; 
+}
+.global-nav .menu ul li:last-child a {
+  border-right: none;
 }
 
-.logo-text {
-  font-size: 20px;
-  margin-top: 10px;
-  text-align: center;
-  letter-spacing: .2em;
+/* マウスカーソルが乗っかった時 */
+.global-nav .menu ul a:hover {
+  background-color: var(--primary-050);
+  color: var(--secondary-050);
+  border-bottom: 4px solid var(--secondary-050);
 }
+
+
 
 
 /*--------------------------------
@@ -155,11 +200,16 @@ li {
 }
 
 .works-title {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 8px;
+  font-size: 20px;
+  margin-top: 15px;
+  color:rgb(33,210,244);
 }
 
+.works-text {
+  font-weight: bold;
+  font-size: 25px;
+  color:rgb(33,210,244);
+}
 #works-section {
   background: radial-gradient(#333149, #0E0C1A);
 }
@@ -169,27 +219,30 @@ li {
 /*--------------------------------
  About
 ---------------------------------*/
+.about-section {
+  text-align: center;
+}
 .about-section .inner {
   max-width: 1000px;
-  
 }
 
 .about-item {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+ 
 }
 
 .about-image-wrapper {
   flex: 0 0 25%;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .about-body {
-  
-  flex: 1;
-  line-height: 1.8;
+
+line-height: 3;
 }
+
 
 .about-body p:not(:last-child) {
   margin-bottom: 20px;
@@ -206,13 +259,14 @@ li {
 ---------------------------------*/
 .skill-section .inner {
   
-  max-width: 1000px;
+  max-width: 800px;
 }
 
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+ 
 }
 
 .skill-item {
@@ -220,7 +274,7 @@ li {
   flex: 0 0 45%;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .skill-image-wrapper {
@@ -238,10 +292,13 @@ li {
 
 .skill-title {
   margin-bottom: 3px;
+  color:rgb(33,210,244);
 }
 
+
+
 .skill-color {
-  color: #fff;
+  color: yellow;
 }
 
 #skill-section{
@@ -286,7 +343,7 @@ li {
 }
 
 #contact-section{
-  background: linear-gradient(#333149, #0E0C1A );
+  background: radial-gradient(#333149, #0E0C1A);
  
 }
 
@@ -294,7 +351,7 @@ li {
  Footer
 ---------------------------------*/
 .footer {
-  background: linear-gradient(#333149, #0E0C1A );
+  background: black;
 }
 
 .footer .inner {
