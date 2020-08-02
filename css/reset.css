@@ -4,7 +4,7 @@
 }
 
 :root {
-    --primary-050: #3700ff; /* サンプル */
+    --primary-050: #FF6D00; /* サンプル */
     --secondary-050: #ffe604; /* サンプル */
     --dark-087: rgba(0,0,0,0.87);
     --dark-054: rgba(0,0,0,0.54);
@@ -43,7 +43,7 @@
     justify-content: space-between;
 
     /* 背景設定しないとナビゲーションの背景が透明のまま */
-    background-color: #fff;
+    background-color: #1C0A00;
 
     box-shadow: 0 2px 1rem var(--dark-026);
 }
